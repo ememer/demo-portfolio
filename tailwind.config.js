@@ -21,6 +21,52 @@ module.exports = {
       maxWidth: createMinMaxSpacing("vw"),
       minHeight: createMinMaxSpacing("vh"),
       minWidth: createMinMaxSpacing("vw"),
+      keyframes: {
+        slideUp: {
+          "100%": {
+            top: "10%",
+            right: "25%",
+          },
+        },
+        slideUpRight: {
+          "100%": {
+            top: "2%",
+            right: "35%",
+          },
+        },
+        slideRight: {
+          "100%": {
+            top: "0%",
+            right: "5%",
+          },
+        },
+        mobileSlideRight: {
+          "100%": {
+            top: "-7%",
+            right: "-10%",
+          },
+        },
+        mobileSlideDownLeft: {
+          "100%": {
+            top: "10%",
+            right: "7%",
+          },
+        },
+        mobileSlideLeft: {
+          "100%": {
+            top: "-10%",
+            right: "10%",
+          },
+        },
+      },
+      animation: {
+        slideUp: "slideUp 1s ease-in-out forwards",
+        slideUpRight: "slideUpRight 1s ease-in-out forwards",
+        slideRight: "slideRight 1s ease-in-out forwards",
+        mobileSlideRight: "mobileSlideRight 1s ease-in-out forwards",
+        mobileSlideDownLeft: "mobileSlideDownLeft 2s ease-in-out forwards",
+        mobileSlideLeft: "mobileSlideLeft 2s ease-in-out forwards",
+      },
       colors: {
         mainDark: {
           DEFAULT: "#1A1A40",

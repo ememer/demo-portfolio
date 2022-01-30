@@ -26,14 +26,14 @@ const Index = () => {
           </section>
           <section className="py-20">
             <div className="flex flex-col lg:flex-row items-center justify-between">
-              <AkcentBox className="relative w-full min-h-50-screen border-solid border-2 border-red-200">
-                <NotificationBox className="bg-mainDark-900 w-full lg:w-2/5 z-30 absolute top-0 -right-0 scale-75" />
-                <NotificationBox className="bg-mainDark-900 w-full lg:w-2/5 z-20 absolute top-0 -right-0 scale-75 backdrop-blur-sm" />
-                <NotificationBox className="bg-mainDark-900 w-full lg:w-2/5 z-10 absolute top-0 -right-0 scale-75 backdrop-blur-sm" />
+              <AkcentBox className="relative w-full min-h-50-screen">
+                <NotificationBox className="bg-mainDark-900 w-full lg:w-3/5 z-30 absolute lg:right-1/2 lg:top-1/3 scale-75 lg:scale-none animate-mobileSlideRight lg:animate-slideUp right-0 top-0" />
+                <NotificationBox className="bg-mainDark-900 w-full lg:w-3/5 z-20 absolute lg:right-1/2 lg:top-1/3 scale-75 lg:scale-none backdrop-blur-sm animate-mobileSlideDownLeft lg:animate-slideUpRight right-0 top-0" />
+                <NotificationBox className="bg-mainDark-900 w-full lg:w-3/5 z-10 absolute lg:right-1/2 right-0 top-0 lg:top-1/3 scale-75 lg:scale-none backdrop-blur-sm animate-mobileSlideLeft lg:animate-slideRight" />
               </AkcentBox>
-              <p className="text-4xl w-full mx-auto my-5">
+              <h2 className="text-4xl w-full mx-auto my-5">
                 Additionally I like motion design too
-              </p>
+              </h2>
             </div>
           </section>
         </div>
