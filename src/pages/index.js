@@ -1,4 +1,5 @@
 import React from "react";
+import AkcentBox from "../components/AkcentBox";
 import Layout from "../components/Layout";
 
 import NotificationBox from "../components/NotificationBox";
@@ -23,10 +24,16 @@ const Index = () => {
               </p>
             </div>
           </section>
-          <section>
-            <div className="flex flex-col">
-              <NotificationBox className="w-full" />
-              <p className="text-2xl">Additionally I like motion design too</p>
+          <section className="py-20">
+            <div className="flex flex-col lg:flex-row items-center justify-between">
+              <AkcentBox className="relative w-full min-h-50-screen border-solid border-2 border-red-200">
+                <NotificationBox className="bg-mainDark-900 w-full lg:w-2/5 z-30 absolute top-0 -right-0 scale-75" />
+                <NotificationBox className="bg-mainDark-900 w-full lg:w-2/5 z-20 absolute top-0 -right-0 scale-75 backdrop-blur-sm" />
+                <NotificationBox className="bg-mainDark-900 w-full lg:w-2/5 z-10 absolute top-0 -right-0 scale-75 backdrop-blur-sm" />
+              </AkcentBox>
+              <p className="text-4xl w-full mx-auto my-5">
+                Additionally I like motion design too
+              </p>
             </div>
           </section>
         </div>

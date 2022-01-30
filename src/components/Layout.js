@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         </div>
         <Hamburegr toggleMenu={setIsMenuOpen} />
         {isMenuOpen && (
-          <nav className="fixed left-0 top-0 w-3/4 md:w-2/4 lg:w-1/4 min-h-screen bg-mainDark-200 px-10 py-20 text-2xl font-bold shadow-md rounded-r-lg my-2">
+          <nav className="fixed left-0 z-50 top-0 w-3/4 md:w-2/4 lg:w-1/4 min-h-screen bg-mainDark-200 px-10 py-20 text-2xl font-bold shadow-md rounded-r-lg my-2">
             <ul>
               <li>test</li>
             </ul>
