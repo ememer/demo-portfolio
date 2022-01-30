@@ -1,9 +1,10 @@
+import clsx from "clsx";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
-const NotificationBox = () => {
+const NotificationBox = ({ className }) => {
   return (
-    <div className="bg-red-400 rounded-md grid grid-cols-1 w-2/4">
+    <div className={clsx("bg-red-400 rounded-md grid grid-cols-1", className)}>
       <div className="text-right w-full">
         <StaticImage
           src="../images/Nerd-DFC-13.png"
