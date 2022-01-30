@@ -22,6 +22,12 @@ module.exports = {
       minHeight: createMinMaxSpacing("vh"),
       minWidth: createMinMaxSpacing("vw"),
       keyframes: {
+        menu: {
+          "100%": {
+            left: "0%",
+            width: "75%",
+          },
+        },
         slideUp: {
           "100%": {
             top: "10%",
@@ -66,6 +72,7 @@ module.exports = {
         mobileSlideRight: "mobileSlideRight 1s ease-in-out forwards",
         mobileSlideDownLeft: "mobileSlideDownLeft 2s ease-in-out forwards",
         mobileSlideLeft: "mobileSlideLeft 2s ease-in-out forwards",
+        menu: "menu 0.1s ease-out forwards",
       },
       colors: {
         mainDark: {

@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import Hamburegr from "./Hamburger";
+import clsx from "clsx";
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,8 +17,13 @@ const Layout = ({ children }) => {
         </div>
         <Hamburegr toggleMenu={setIsMenuOpen} />
         {isMenuOpen && (
-          <nav className="fixed left-0 z-50 top-0 w-3/4 md:w-2/4 lg:w-1/4 min-h-screen bg-mainDark-200 px-10 py-20 text-2xl font-bold shadow-md rounded-r-lg ">
+          <nav
+            className={clsx(
+              "fixed left-0 z-50 top-0 w-0 min-h-screen bg-mainDark-200 px-10 py-20 text-2xl font-bold shadow-md rounded-r-lg animate-menu"
+            )}
+          >
             <ul>
+              <li>test</li>
               <li>test</li>
             </ul>
           </nav>
