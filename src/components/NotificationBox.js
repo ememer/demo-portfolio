@@ -1,17 +1,19 @@
-import clsx from "clsx";
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+
+import { StaticImage } from "gatsby-plugin-image";
+
+import clsx from "clsx";
 
 const NotificationBox = ({ className }) => {
   return (
     <div
       className={clsx(
-        "rounded-md grid grid-cols-1  bg-clip-padding bg-opacity-60 shadow-xl backdrop-filter  p-6",
+        "grid grid-cols-1 p-6 bg-clip-padding bg-opacity-60 rounded-md shadow-xl backdrop-filter",
         className
       )}
     >
       <div className="flex justify-between items-center">
-        <h2 className="font-bold text-2xl">Notification Box</h2>
+        <h2 className="text-2xl font-bold">Notification Box</h2>
         <StaticImage
           src="../images/Nerd-DFC-13.png"
           alt=""
