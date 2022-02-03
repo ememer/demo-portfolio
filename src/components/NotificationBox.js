@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { StaticImage } from "gatsby-plugin-image";
 
 import clsx from "clsx";
 
-const NotificationBox = ({ className }) => {
+const NotificationBox = ({ className, paragraph, title }) => {
   return (
     <div
       className={clsx(
@@ -13,7 +14,7 @@ const NotificationBox = ({ className }) => {
       )}
     >
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold">Notification Box</h2>
+        <h2 className="text-2xl font-bold">{title}</h2>
         <StaticImage
           src="../images/Nerd-DFC-13.png"
           alt=""
@@ -21,14 +22,15 @@ const NotificationBox = ({ className }) => {
           className="w-12 h-12 m-4"
         />
       </div>
-      <p className="p-2">
-        Cupcake ipsum dolor sit amet. Macaroon wafer halvah marshmallow carrot
-        cake ice cream gingerbread danish ice cream. Sweet roll gummies wafer
-        candy brownie dessert marshmallow. Jelly-o powder biscuit cotton candy
-        danish gummies halvah.
-      </p>
+      <p className="p-2">{paragraph}</p>
     </div>
   );
 };
 
 export default NotificationBox;
+
+NotificationBox.propTypes = {
+  className: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  paragraph: PropTypes.string.isRequired,
+};
