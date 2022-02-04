@@ -1,26 +1,21 @@
 export const NotificationBoxes = [
   {
-    title: "Notification Box1",
-    paragraph: `Cupcake ipsum dolor sit amet. Macaroon wafer halvah marshmallow carrot
-        cake ice cream gingerbread danish ice cream. Sweet roll gummies wafer
-        candy brownie dessert marshmallow. Jelly-o powder biscuit cotton candy
-        danish gummies halvah.`,
-    className: "z-30 animate-mobileSlideRight lg:animate-slideUp",
+    title: "Animation interesting facts 3",
+    paragraph: `The original name of Tom and Jerry were decided to be Jasper and Jinx by the creators.`,
+    className: "animate-mobileSlideRight lg:animate-slideUp bg-opacity-60",
+    imageSrc: require("./../../images/Assets/Nerd-DFC-13.png").default,
   },
   {
-    title: "Notification Box2",
-    paragraph: `Cupcake ipsum dolor sit amet. Macaroon wafer halvah marshmallow carrot
-        cake ice cream gingerbread danish ice cream. Sweet roll gummies wafer
-        candy brownie dessert marshmallow. Jelly-o powder biscuit cotton candy
-        danish gummies halvah.`,
-    className: "z-20 animate-mobileSlideDownLeft lg:animate-slideUpRight",
+    title: "Animation interesting facts 2",
+    paragraph: `The magic carpet ride that Aladdin made through the Cave of Wonders was made possible with computer-generated images (CGI).`,
+    className:
+      "animate-mobileSlideDownLeft lg:animate-slideUpRight bg-opacity-60",
+    imageSrc: require("./../../images/Assets/Nerd-DFC-17.png").default,
   },
   {
-    title: "Notification Box3",
-    paragraph: `Cupcake ipsum dolor sit amet. Macaroon wafer halvah marshmallow carrot
-        cake ice cream gingerbread danish ice cream. Sweet roll gummies wafer
-        candy brownie dessert marshmallow. Jelly-o powder biscuit cotton candy
-        danish gummies halvah.`,
-    className: "z-10 animate-mobileSlideLeft lg:animate-slideRight",
+    title: "Animation interesting facts 1",
+    paragraph: `Toy Story was the first-ever completely CGI-based animated film`,
+    className: "animate-mobileSlideLeft lg:animate-slideRight bg-opacity-60",
+    imageSrc: require("./../../images/Assets/Nerd-DFC-21.png").default,
   },
 ];

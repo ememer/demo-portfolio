@@ -48,8 +48,8 @@ module.exports = {
         },
         mobileSlideRight: {
           "100%": {
-            top: "-7%",
-            right: "-10%",
+            top: "-8%",
+            right: "-13%",
           },
         },
         mobileSlideDownLeft: {
@@ -60,8 +60,35 @@ module.exports = {
         },
         mobileSlideLeft: {
           "100%": {
-            top: "-10%",
+            top: "-15%",
+            right: "12%",
+          },
+        },
+        shuffleCard: {
+          "20%": {
+            top: "20%",
+          },
+          "45%": {
+            top: "50%",
+          },
+          "50%": {
+            zIndex: "30",
+          },
+          "100%": {
+            top: "12%",
             right: "10%",
+            zIndex: "30",
+            opacivity: "80%",
+          },
+        },
+        mobileShuffleCard: {
+          "50%": {
+            top: "50%",
+          },
+          "100%": {
+            top: "5%",
+            zIndex: "30",
+            opacivity: "80%",
           },
         },
       },
@@ -73,6 +100,8 @@ module.exports = {
         mobileSlideDownLeft: "mobileSlideDownLeft 2s ease-in-out forwards",
         mobileSlideLeft: "mobileSlideLeft 2s ease-in-out forwards",
         menu: "menu 0.1s ease-out forwards",
+        shuffleCard: "shuffleCard 1.5s ease-in-out forwards",
+        mobileShuffleCard: "mobileShuffleCard 2.5s ease-in-out forwards",
       },
       colors: {
         mainDark: {
