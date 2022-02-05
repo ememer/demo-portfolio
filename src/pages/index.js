@@ -55,13 +55,13 @@ const Index = () => {
                 ))}
               </AkcentBox>
               <h2
-                data-sal="slide-left"
+                data-sal="flip-up"
                 data-sal-duration="1000"
                 data-sal-easing="ease-in-out-quad"
-                className="w-full px-2 my-5 mx-auto text-4xl"
+                className="inline-block w-full px-2 my-5 text-3xl lg:text-4xl"
               >
                 Additionally I like motion design too
-                <span className="block text-sm font-light animate-pulse">
+                <span className="inline-block w-full text-sm font-light animate-pulse">
                   {" "}
                   Click on each boxes 🤤
                 </span>
