@@ -28,59 +28,119 @@ module.exports = {
             width: "75%",
           },
         },
+
+        //BOX3//
+
         slideUp: {
+          "0%": {
+            top: "12%",
+            right: "10%",
+          },
           "100%": {
             top: "10%",
             right: "25%",
           },
         },
-        slideUpRight: {
+
+        shuffleCardUp: {
+          "0%": {
+            top: "10%",
+            right: "25%",
+          },
+          "50%": {
+            top: "50%",
+          },
           "100%": {
-            top: "2%",
-            right: "35%",
+            top: "12%",
+            right: "10%",
+            zIndex: "30",
           },
         },
-        slideRight: {
-          "100%": {
-            top: "0%",
-            right: "5%",
-          },
-        },
+
+        //MOBILE//
+
         mobileSlideRight: {
           "100%": {
             top: "-8%",
             right: "-13%",
           },
         },
+
+        //BOX2//
+
+        slideUpRight: {
+          "0%": {
+            top: "12%",
+            right: "10%",
+          },
+          "100%": {
+            top: "2%",
+            right: "35%",
+          },
+        },
+
+        shuffleCardUpRight: {
+          "0%": {
+            top: "2%",
+            right: "35%",
+          },
+          "50%": {
+            top: "50%",
+          },
+          "100%": {
+            top: "12%",
+            right: "10%",
+            zIndex: "30",
+          },
+        },
+
+        //MOBILE//
+
         mobileSlideDownLeft: {
           "100%": {
             top: "10%",
             right: "7%",
           },
         },
+
+        //BOX1//
+
+        slideRight: {
+          "0%": {
+            top: "12%",
+            right: "10%",
+          },
+          "100%": {
+            top: "0%",
+            right: "5%",
+          },
+        },
+
+        shuffleCardSlideRight: {
+          "0%": {
+            top: "0%",
+            right: "5%",
+          },
+          "50%": {
+            right: "-10%",
+            top: "-25%",
+          },
+          "100%": {
+            top: "12%",
+            right: "10%",
+            zIndex: "30",
+          },
+        },
+
+        //MOBILE//
+
         mobileSlideLeft: {
           "100%": {
             top: "-15%",
             right: "12%",
           },
         },
-        shuffleCard: {
-          "20%": {
-            top: "20%",
-          },
-          "45%": {
-            top: "50%",
-          },
-          "50%": {
-            zIndex: "30",
-          },
-          "100%": {
-            top: "12%",
-            right: "10%",
-            zIndex: "30",
-            opacivity: "80%",
-          },
-        },
+
         mobileShuffleCard: {
           "50%": {
             top: "50%",
@@ -88,7 +148,7 @@ module.exports = {
           "100%": {
             top: "5%",
             zIndex: "30",
-            opacivity: "80%",
+            opacivity: "1",
           },
         },
       },
@@ -100,7 +160,9 @@ module.exports = {
         mobileSlideDownLeft: "mobileSlideDownLeft 2s ease-in-out forwards",
         mobileSlideLeft: "mobileSlideLeft 2s ease-in-out forwards",
         menu: "menu 0.1s ease-out forwards",
-        shuffleCard: "shuffleCard 1.5s ease-in-out forwards",
+        shuffleCardUp: "shuffleCardUp 1.5s ease-out forwards",
+        shuffleCardUpRight: "shuffleCardUpRight 1.5s ease-out forwards",
+        shuffleCardSlideRight: "shuffleCardSlideRight 1.5s ease-out forwards",
         mobileShuffleCard: "mobileShuffleCard 2.5s ease-in-out forwards",
       },
       colors: {

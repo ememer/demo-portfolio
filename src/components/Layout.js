@@ -13,10 +13,9 @@ const Layout = ({ children }) => {
       <div className="container flex flex-row justify-end md:justify-between items-center py-10 px-8 mx-auto">
         <div className="w-full text-center lg:text-left">
           <StaticImage
-            src="../images/ChillyCube_white.png"
+            src="../images/ChillyCube-white.png"
             alt="ChillyCube - Logo"
-            className="w-1/5 lg:w-1/12"
-            loading="lazy"
+            className="w-3/12 lg:w-1/12"
           />
         </div>
         <Hamburger toggleMenu={setIsMenuOpen} />
