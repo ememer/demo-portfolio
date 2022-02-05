@@ -34,4 +34,7 @@ NotificationBox.propTypes = {
   className: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string.isRequired,
+  boxId: PropTypes.number.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  image: PropTypes.string.isRequired,
 };

@@ -25,7 +25,7 @@ module.exports = {
         menu: {
           "100%": {
             left: "0%",
-            width: "75%",
+            width: "70%",
           },
         },
 
@@ -152,7 +152,7 @@ module.exports = {
           },
           "50%": {
             right: "-10%",
-            top: "-25%",
+            top: "-20%",
           },
           "100%": {
             top: "12%",
@@ -200,7 +200,8 @@ module.exports = {
           "mobileShuffleCardRight 2s ease-in-out forwards",
         mobileShuffleCardDownLeft:
           "mobileShuffleCardDownLeft 2s ease-in-out forwards",
-        mobileShuffleCardLeft: "mobileShuffleCardLeft 2s ease-in-out forwards",
+        mobileShuffleCardLeft:
+          "mobileShuffleCardLeft 1.5s ease-in-out forwards",
       },
       colors: {
         mainDark: {

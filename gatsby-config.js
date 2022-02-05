@@ -24,5 +24,6 @@ module.exports = {
       },
       __key: "images",
     },
+    `gatsby-plugin-scroll-reveal`,
   ],
 };
