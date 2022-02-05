@@ -66,6 +66,21 @@ module.exports = {
           },
         },
 
+        mobileShuffleCardRight: {
+          "0%": {
+            top: "-8%",
+            right: "-13%",
+          },
+          "50%": {
+            top: "-60%",
+            right: "-25%",
+          },
+          "100%": {
+            top: "5%",
+            zIndex: "30",
+          },
+        },
+
         //BOX2//
 
         slideUpRight: {
@@ -100,6 +115,20 @@ module.exports = {
           "100%": {
             top: "10%",
             right: "7%",
+          },
+        },
+
+        mobileShuffleCardDownLeft: {
+          "0%": {
+            top: "10%",
+            right: "7%",
+          },
+          "50%": {
+            top: "50%",
+          },
+          "100%": {
+            top: "5%",
+            zIndex: "30",
           },
         },
 
@@ -141,14 +170,18 @@ module.exports = {
           },
         },
 
-        mobileShuffleCard: {
+        mobileShuffleCardLeft: {
+          "0%": {
+            top: "-15%",
+            right: "12%",
+          },
           "50%": {
-            top: "50%",
+            top: "-60%",
+            right: "15%",
           },
           "100%": {
             top: "5%",
             zIndex: "30",
-            opacivity: "1",
           },
         },
       },
@@ -163,7 +196,11 @@ module.exports = {
         shuffleCardUp: "shuffleCardUp 1.5s ease-out forwards",
         shuffleCardUpRight: "shuffleCardUpRight 1.5s ease-out forwards",
         shuffleCardSlideRight: "shuffleCardSlideRight 1.5s ease-out forwards",
-        mobileShuffleCard: "mobileShuffleCard 2.5s ease-in-out forwards",
+        mobileShuffleCardRight:
+          "mobileShuffleCardRight 2s ease-in-out forwards",
+        mobileShuffleCardDownLeft:
+          "mobileShuffleCardDownLeft 2s ease-in-out forwards",
+        mobileShuffleCardLeft: "mobileShuffleCardLeft 2s ease-in-out forwards",
       },
       colors: {
         mainDark: {
