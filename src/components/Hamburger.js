@@ -1,20 +1,51 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import clsx from "clsx";
 
-const hamburgerClassName = "block bg-gray-300";
+const hamburgerClassName =
+  "block bg-gray-300 transition translate-x-0 duration-150";
 
-const Hamburger = ({ toggleMenu }) => {
+const Hamburger = ({ isMenuOpen, toggleMenu }) => {
+  const barsClasses = {
+    top: "-rotate-45",
+    mid: "invisible",
+    bottom: "rotate-45",
+  };
+
   return (
     <div
       onClick={() => toggleMenu((prevState) => !prevState)}
       className="flex flex-col items-end space-y-2 cursor-pointer"
     >
-      <span className={clsx(hamburgerClassName, "w-6 lg:w-8 h-0.5")} />
-      <span className={clsx(hamburgerClassName, "w-4 lg:w-5 h-0.5 lg:h-1")} />
-      <span className={clsx(hamburgerClassName, "w-6 lg:w-8 h-0.5")} />
+      <span
+        className={clsx(
+          hamburgerClassName,
+          isMenuOpen && barsClasses.top,
+          "w-7 lg:w-8 h-0.5 "
+        )}
+      />
+      <span
+        className={clsx(
+          hamburgerClassName,
+          isMenuOpen && barsClasses.mid,
+          "w-4 lg:w-5 h-0.5 lg:h-1"
+        )}
+      />
+      <span
+        className={clsx(
+          hamburgerClassName,
+          isMenuOpen && barsClasses.bottom,
+          "w-7 lg:w-8 h-0.5"
+        )}
+      />
     </div>
   );
 };
 
 export default Hamburger;
+
+Hamburger.propTypes = {
+  isMenuOpen: PropTypes.bool.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
+};
