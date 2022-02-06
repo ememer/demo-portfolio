@@ -227,7 +227,7 @@ module.exports = {
           DEFAULT: "#da2286",
         },
         paintBG: {
-          DEFAULT: "#ffcf61",
+          DEFAULT: "#086972",
         },
       },
     },

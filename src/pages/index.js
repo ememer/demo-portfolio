@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
+import { faDribbble } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import sal from "sal.js";
 
 import AkcentBox from "../components/AkcentBox";
 import Layout from "../components/Layout";
 import NotificationBox from "../components/NotificationBox";
-import SkillBox from "../components/skillBox";
+import ProjectGallery from "../components/ProjectsGallery";
+import SkillBox from "../components/SkillBox";
 import { designList } from "../shared/utils/design";
 import { notificationBoxes } from "../shared/utils/NotificationBoxes";
 
@@ -63,7 +66,7 @@ const Index = () => {
                 className="inline-block w-full px-2 my-5 text-3xl lg:text-4xl"
               >
                 Additionally I like motion design too
-                <span className="inline-block w-full text-sm font-light animate-pulse">
+                <span className="inline-block w-full text-sm font-light text-blue-300 animate-pulse">
                   {" "}
                   Click on each boxes 🤤
                 </span>
@@ -72,7 +75,10 @@ const Index = () => {
           </section>
           <section className="py-20">
             <div className="w-full">
-              <h2 id="design" className="my-5 text-5xl font-bold text-center">
+              <h2
+                id="design"
+                className="py-6 my-5 text-5xl font-bold text-center"
+              >
                 Design
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 py-10">
@@ -103,13 +109,26 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full md:w-3/4 mx-auto">
               <h2
                 id="projects"
                 className="w-full py-6 text-4xl font-semibold text-center"
               >
                 Projects
               </h2>
+              <ProjectGallery />
+              <div className="flex flex-col w-full p-4 text-right">
+                Checkout my Dribble site 😏{" "}
+                <a
+                  className=" text-blue-300"
+                  href="https://www.dribbble.com/ememer"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon className="mr-2" icon={faDribbble} />
+                  Dribble.com
+                </a>
+              </div>
             </div>
           </section>
         </div>

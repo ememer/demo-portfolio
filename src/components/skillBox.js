@@ -11,7 +11,7 @@ const SkillBox = ({ className, image, title, skill }) => {
       data-sal="slide-right"
       data-sal-easing="ease-in-expo"
       className={clsx(
-        "grid grid-cols-2 gap-2 p-6 my-5 bg-clip-padding hover:bg-gradient-to-r rounded-md shadow-xl backdrop-filter duration-300 transform md:hover:scale-105",
+        "grid grid-cols-2 gap-2 p-6 my-5 bg-clip-padding rounded-md shadow-xl backdrop-filter duration-700 transform md:hover:scale-105",
         className
       )}
     >

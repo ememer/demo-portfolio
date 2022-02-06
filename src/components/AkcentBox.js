@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import clsx from "clsx";
 import sal from "sal.js";
@@ -18,3 +19,7 @@ const AkcentBox = ({ className, children }) => {
 };
 
 export default AkcentBox;
+
+AkcentBox.propTypes = {
+  className: PropTypes.string.isRequired,
+};
