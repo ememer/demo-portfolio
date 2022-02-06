@@ -6,7 +6,7 @@ import sal from "sal.js";
 import AkcentBox from "../components/AkcentBox";
 import Layout from "../components/Layout";
 import NotificationBox from "../components/NotificationBox";
-import { notificationBoxes } from "../shared/utils/notificationBoxes";
+import { notificationBoxes } from "../shared/utils/NotificationBoxes";
 
 const notificationBoxClassName =
   "absolute top-0 lg:top-1/3 right-0 lg:right-2/2 w-full lg:w-3/4 bg-mainDark-200 scale-75 lg:scale-none cursor-pointer";
