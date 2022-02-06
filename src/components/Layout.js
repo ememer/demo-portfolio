@@ -3,6 +3,16 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faDribbble, faGithubAlt } from "@fortawesome/free-brands-svg-icons";
+import {
+  faAddressCard,
+  faBullseye,
+  faFile,
+  faFileCode,
+  faMarker,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import Scroll from "react-scroll";
 
@@ -11,6 +21,16 @@ import { mediaLinks, navigationLinks } from "../shared/utils/navigation";
 import Hamburger from "./Hamburger";
 
 const ScrollLink = Scroll.Link;
+
+library.add(
+  faGithubAlt,
+  faDribbble,
+  faAddressCard,
+  faFileCode,
+  faMarker,
+  faFile,
+  faBullseye
+);
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,8 +72,9 @@ const Layout = ({ children }) => {
                     duration={300}
                     delay={500}
                     smooth={true}
-                    className="flex flex-col mt-4 md:mt-8 mb-2 md:mb-4 cursor-pointer"
+                    className="flex justify-center items-center mt-4 md:mt-8 mb-2 md:mb-4 cursor-pointer"
                   >
+                    <FontAwesomeIcon className="w-5 mr-3" icon={nav.icon} />
                     {nav.link}
                   </ScrollLink>
                   {nav.projects && (
@@ -63,8 +84,12 @@ const Layout = ({ children }) => {
                       duration={300}
                       delay={500}
                       smooth={true}
-                      className="font-light cursor-pointer"
+                      className="mx-auto font-light cursor-pointer"
                     >
+                      <FontAwesomeIcon
+                        className="w-3 mr-3"
+                        icon={nav.projects.icon}
+                      />
                       {nav.projects.link}
                     </ScrollLink>
                   )}
@@ -72,15 +97,19 @@ const Layout = ({ children }) => {
               ))}
             </ul>
             <div className="my-20">
-              <ul className="grid grid-cols-2">
+              <ul className="grid grid-cols-2 lg:w-1/2 mx-auto">
                 {mediaLinks.map((externalLink) => (
                   <a
-                    className="px-6 text-sm"
+                    className="px-6 mx-auto text-sm"
                     target="_blank"
                     key={externalLink.link}
                     href={externalLink.url}
                     rel="noreferrer"
                   >
+                    <FontAwesomeIcon
+                      className="w-full"
+                      icon={externalLink?.icon}
+                    />
                     {externalLink.link}
                   </a>
                 ))}
