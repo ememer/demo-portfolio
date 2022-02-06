@@ -6,6 +6,8 @@ import sal from "sal.js";
 import AkcentBox from "../components/AkcentBox";
 import Layout from "../components/Layout";
 import NotificationBox from "../components/NotificationBox";
+import SkillBox from "../components/skillBox";
+import { designList } from "../shared/utils/design";
 import { notificationBoxes } from "../shared/utils/NotificationBoxes";
 
 const notificationBoxClassName =
@@ -65,6 +67,48 @@ const Index = () => {
                   {" "}
                   Click on each boxes 🤤
                 </span>
+              </h2>
+            </div>
+          </section>
+          <section className="py-20">
+            <div className="w-full">
+              <h2 id="design" className="my-5 text-5xl font-bold text-center">
+                Design
+              </h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 py-10">
+                <div className="grid order-2 grid-cols-1 md:grid-cols-2 gap-2 w-full">
+                  {designList.map((design) => (
+                    <SkillBox
+                      key={design.design}
+                      image={design.icon}
+                      title={design.design}
+                      skill={design.level}
+                      className={design.colors}
+                    />
+                  ))}
+                </div>
+                <div className="flex order-1 justify-around items-center">
+                  <p className="w-full lg:w-2/3 p-4 text-lg font-light ">
+                    <span className="inline-block w-full p-2 text-xl font-bold text-left">
+                      Started with MS Paint
+                    </span>
+                    Couple years ago like a kid i was started creating things in
+                    MS Paint and some guy said "Hey this is PhotoShop try it!".
+                    Then i jon to world of design
+                    <span className="font-semibold">
+                      {" "}
+                      and now working with...
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full">
+              <h2
+                id="projects"
+                className="w-full py-6 text-4xl font-semibold text-center"
+              >
+                Projects
               </h2>
             </div>
           </section>
