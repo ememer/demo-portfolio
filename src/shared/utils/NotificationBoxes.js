@@ -1,4 +1,4 @@
-export const NotificationBoxes = [
+export const notificationBoxes = [
   {
     id: "1",
     title: "Animation interesting facts",

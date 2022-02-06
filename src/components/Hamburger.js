@@ -15,10 +15,12 @@ const Hamburger = ({ isMenuOpen, toggleMenu }) => {
 
   return (
     <div
+      id="hamburger"
       onClick={() => toggleMenu((prevState) => !prevState)}
-      className="flex flex-col items-end space-y-2 cursor-pointer"
+      className="flex fixed right-10 lg:right-40 flex-col items-end space-y-2 cursor-pointer"
     >
       <span
+        id="hamburger"
         className={clsx(
           hamburgerClassName,
           isMenuOpen && barsClasses.top,
@@ -26,6 +28,7 @@ const Hamburger = ({ isMenuOpen, toggleMenu }) => {
         )}
       />
       <span
+        id="hamburger"
         className={clsx(
           hamburgerClassName,
           isMenuOpen && barsClasses.mid,
@@ -33,6 +36,7 @@ const Hamburger = ({ isMenuOpen, toggleMenu }) => {
         )}
       />
       <span
+        id="hamburger"
         className={clsx(
           hamburgerClassName,
           isMenuOpen && barsClasses.bottom,

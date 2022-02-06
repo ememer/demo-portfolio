@@ -6,7 +6,7 @@ import sal from "sal.js";
 import AkcentBox from "../components/AkcentBox";
 import Layout from "../components/Layout";
 import NotificationBox from "../components/NotificationBox";
-import { NotificationBoxes } from "../shared/utils/NotificationBoxes";
+import { notificationBoxes } from "../shared/utils/NotificationBoxes";
 
 const notificationBoxClassName =
   "absolute top-0 lg:top-1/3 right-0 lg:right-2/2 w-full lg:w-3/4 bg-mainDark-200 scale-75 lg:scale-none cursor-pointer";
@@ -37,7 +37,7 @@ const Index = () => {
           <section className="py-20">
             <div className="flex flex-col lg:flex-row justify-between items-center">
               <AkcentBox className="relative w-full min-h-50-screen">
-                {NotificationBoxes.map((box, index) => (
+                {notificationBoxes.map((box, index) => (
                   <NotificationBox
                     onSelect={setCurrentSelectedAkcentIndex}
                     image={box.imageSrc}
