@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import clsx from "clsx";
 
-const NotificationBox = ({
+const InterestingFacts = ({
   className,
   paragraph,
   title,
@@ -28,9 +28,9 @@ const NotificationBox = ({
   );
 };
 
-export default NotificationBox;
+export default InterestingFacts;
 
-NotificationBox.propTypes = {
+InterestingFacts.propTypes = {
   className: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string.isRequired,

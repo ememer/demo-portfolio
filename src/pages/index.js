@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 
 import { faDribbble } from "@fortawesome/free-brands-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import sal from "sal.js";
 
 import AkcentBox from "../components/AkcentBox";
+import InterestingFacts from "../components/InterestingFacts";
 import Layout from "../components/Layout";
-import NotificationBox from "../components/NotificationBox";
 import ProjectGallery from "../components/ProjectsGallery";
 import SkillBox from "../components/SkillBox";
 import { designList } from "../shared/utils/design";
 import { galleryProjects } from "../shared/utils/galleryData";
-import { notificationBoxes } from "../shared/utils/NotificationBoxes";
+import { interestingFacts } from "../shared/utils/interestingFacts";
 
-const notificationBoxClassName =
+const interestingFactsClassName =
   "absolute top-0 lg:top-1/3 right-0 lg:right-2/2 w-full lg:w-3/4 bg-mainDark-200 scale-75 lg:scale-none cursor-pointer";
 
 const Index = () => {
@@ -45,8 +46,8 @@ const Index = () => {
           <section className="py-20">
             <div className="flex flex-col lg:flex-row justify-between items-center">
               <AkcentBox className="relative w-full min-h-50-screen">
-                {notificationBoxes.map((box, index) => (
-                  <NotificationBox
+                {interestingFacts.map((box, index) => (
+                  <InterestingFacts
                     onSelect={setCurrentSelectedAkcentIndex}
                     image={box.imageSrc}
                     boxId={index}
@@ -54,7 +55,7 @@ const Index = () => {
                     paragraph={box.paragraph}
                     title={box.title}
                     className={clsx(
-                      notificationBoxClassName,
+                      interestingFactsClassName,
                       currentSelectedAkcentIndex === index
                         ? box.shuffle
                         : box.className
@@ -114,7 +115,10 @@ const Index = () => {
             </div>
             <div className="relative w-full md:w-3/4 mx-auto">
               {isDribbbleInviteVisible && (
-                <div className="absolute right-1/4 bottom-10 ">test</div>
+                <FontAwesomeIcon
+                  className="absolute right-1/2 lg:right-1/4 bottom-5 animate-ping"
+                  icon={faArrowRight}
+                />
               )}
               <h2
                 id="projects"

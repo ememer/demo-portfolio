@@ -6,17 +6,17 @@ export const galleryProjects = [
   },
   {
     id: 2,
-    alt: "SkayWallet project",
+    alt: "BurgerKing project",
     img: require("../../images/Assets/design/shots/Shot-2.png").default,
   },
   {
     id: 3,
-    alt: "SkayWallet project",
+    alt: "YouHome project",
     img: require("../../images/Assets/design/shots/Shot-3.png").default,
   },
   {
-    id: 3,
-    alt: "SkayWallet project",
+    id: 4,
+    alt: "Test project",
     img: require("../../images/Assets/design/shots/Test.png").default,
   },
 ];

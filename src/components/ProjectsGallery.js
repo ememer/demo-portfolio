@@ -36,7 +36,7 @@ const ProjectGallery = ({ data, onClick, isClicked }) => {
           data-sal-easing="ease-out-cubic"
           data-sal-delay="200"
           data-sal-duration="1500"
-          className="flex absolute top-10 -left-2 z-10 items-center w-1/2 h-4/5 p-1 md:p-2 bg-gradient-to-br from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
+          className="flex absolute top-10 -left-2 z-10 items-center w-1/2 h-3/4 md:h-3/5 lg:h-4/5 p-1 md:p-2 bg-gradient-to-br from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
         >
           <div className="w-full mx-auto rounded-lg">
             <img
@@ -63,12 +63,12 @@ const ProjectGallery = ({ data, onClick, isClicked }) => {
               onClick(true);
               setTimeout(() => {
                 onClick(false);
-              }, 3000);
+              }, 3500);
             }
           }}
-          className="flex absolute left-1/2 z-20 items-center w-1/2 h-4/5 p-1 md:p-2 bg-gray-200 rounded-lg shadow-lg hover:shadow-xl duration-150 ease-in-out transform hover:scale-110 hover:rotate-1 -translate-x-1/2"
+          className="flex absolute left-1/2 z-20 items-center w-1/2 h-3/4 md:h-3/5 lg:h-4/5 p-1 md:p-2 rounded-lg shadow-lg hover:shadow-xl duration-150 ease-in-out transform hover:scale-110 hover:rotate-1 -translate-x-1/2"
         >
-          <div className="mx-auto rounded-lg">
+          <div className="w-full mx-auto rounded-lg">
             <img
               className="rounded-md"
               src={data[midPhoto].img}
@@ -82,7 +82,7 @@ const ProjectGallery = ({ data, onClick, isClicked }) => {
           data-sal-easing="ease-out-cubic"
           data-sal-delay="600"
           data-sal-duration="1500"
-          className="flex absolute top-10 -right-2 z-10 items-center w-1/2 h-4/5 p-1 md:p-2 bg-gradient-to-bl from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
+          className="flex absolute top-10 -right-2 z-10 items-center w-1/2 h-3/4 md:h-3/5 lg:h-4/5 p-1 md:p-2 bg-gradient-to-bl from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
         >
           <div className="w-full mx-auto rounded-lg">
             <img
