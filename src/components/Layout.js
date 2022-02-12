@@ -69,8 +69,8 @@ const Layout = ({ children }) => {
                   <ScrollLink
                     onClick={() => setIsMenuOpen(false)}
                     to={nav.url}
-                    duration={300}
-                    delay={500}
+                    duration={1500}
+                    delay={200}
                     smooth={true}
                     className="flex justify-center items-center mt-4 md:mt-8 mb-2 md:mb-4 cursor-pointer"
                   >
@@ -81,8 +81,8 @@ const Layout = ({ children }) => {
                     <ScrollLink
                       onClick={() => setIsMenuOpen(false)}
                       to={nav.projects.url}
-                      duration={300}
-                      delay={500}
+                      duration={1500}
+                      delay={200}
                       smooth={true}
                       className="mx-auto font-light cursor-pointer"
                     >

@@ -31,6 +31,7 @@ const ProjectGallery = ({ data }) => {
         data-sal-duration="1500"
         className="relative min-h-30-screen md:min-h-40-screen lg:min-h-60-screen my-10"
       >
+        {/* LEFT PHOTO*/}
         <div
           data-sal="zoom-in"
           data-sal-easing="ease-out-cubic"
@@ -53,11 +54,13 @@ const ProjectGallery = ({ data }) => {
             />
           </div>
         </div>
+        {/* MID PHOTO*/}
         <div className="absolute left-1/2 z-20 w-1/2 p-1 md:p-2 bg-gray-200 rounded-lg shadow-lg hover:shadow-xl duration-150 ease-in-out transform hover:scale-110 hover:rotate-1 -translate-x-1/2">
           <div className="w-full mx-auto rounded-lg">
             <img src={data[midPhoto].img} alt={data[midPhoto].imgAlt} />
           </div>
         </div>
+        {/* RIGHT PHOTO*/}
         <div
           data-sal="zoom-in"
           data-sal-easing="ease-out-cubic"
