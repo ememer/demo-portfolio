@@ -11,6 +11,7 @@ import NotificationBox from "../components/NotificationBox";
 import ProjectGallery from "../components/ProjectsGallery";
 import SkillBox from "../components/SkillBox";
 import { designList } from "../shared/utils/design";
+import { galleryProjects } from "../shared/utils/galleryData";
 import { notificationBoxes } from "../shared/utils/NotificationBoxes";
 
 const notificationBoxClassName =
@@ -19,6 +20,7 @@ const notificationBoxClassName =
 const Index = () => {
   const [currentSelectedAkcentIndex, setCurrentSelectedAkcentIndex] =
     useState(null);
+  console.log(galleryProjects);
   sal();
   return (
     <div>
@@ -116,7 +118,7 @@ const Index = () => {
               >
                 Projects
               </h2>
-              <ProjectGallery />
+              <ProjectGallery data={galleryProjects} />
               <div className="flex flex-col w-full p-4 text-right">
                 Checkout my Dribble site 😏{" "}
                 <a
