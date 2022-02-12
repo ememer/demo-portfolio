@@ -11,17 +11,16 @@ library.add(faArrowLeft, faArrowRight);
 const buttonStyle = "p-2 px-3 bg-mainDark-100 rounded-md shadow-md";
 
 const ProjectGallery = ({ data }) => {
-  const [midPhoto, setMidPhoto] = useState(Math.round(data.length / 2));
   const [lenghtOfPhotoBar, setLenghtOfPhotoBar] = useState();
 
-  useEffect(() => {
-    let imageBarLenght = document.querySelector("#image-bar").clientWidth;
-    const progressBarWidth = imageBarLenght / data.length;
-    setLenghtOfPhotoBar(progressBarWidth);
-    console.log("lenght", document.querySelector("#image-bar").clientWidth);
-  }, [lenghtOfPhotoBar]);
+  const [midPhoto, setMidPhoto] = useState(Math.round(data.length / 2) - 1);
 
-  console.log("mid", midPhoto);
+  // useEffect(() => {
+  //   let imageBarLenght = document.querySelector("#image-bar").clientWidth;
+  //   const progressBarWidth = imageBarLenght / data.length;
+  //   setLenghtOfPhotoBar(progressBarWidth);
+  //   console.log("lenght", document.querySelector("#image-bar").clientWidth);
+  // }, [lenghtOfPhotoBar]);
 
   return (
     <div>
@@ -40,12 +39,23 @@ const ProjectGallery = ({ data }) => {
           className="absolute top-10 -left-2 z-10 w-1/2 p-1 md:p-2 bg-gradient-to-br from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
         >
           <div className="w-full mx-auto rounded-lg">
-            <img src={data[0].img} alt={data[0].imgAlt} />
+            <img
+              src={
+                midPhoto - 1 < 0
+                  ? data[data.length - 1]?.img
+                  : data[midPhoto - 1]?.img
+              }
+              alt={
+                midPhoto - 1 < 0
+                  ? data[data.length - 1]?.imgAlt
+                  : data[midPhoto - 1]?.imgAlt
+              }
+            />
           </div>
         </div>
         <div className="absolute left-1/2 z-20 w-1/2 p-1 md:p-2 bg-gray-200 rounded-lg shadow-lg hover:shadow-xl duration-150 ease-in-out transform hover:scale-110 hover:rotate-1 -translate-x-1/2">
           <div className="w-full mx-auto rounded-lg">
-            <img src={data[1].img} alt={data[1].imgAlt} />
+            <img src={data[midPhoto].img} alt={data[midPhoto].imgAlt} />
           </div>
         </div>
         <div
@@ -56,13 +66,31 @@ const ProjectGallery = ({ data }) => {
           className="absolute top-10 -right-2 z-10 w-1/2 p-1 md:p-2 bg-gradient-to-bl from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
         >
           <div className="w-full mx-auto rounded-lg">
-            <img src={data[2].img} alt={data[2].imgAlt} />
+            <img
+              src={
+                midPhoto + 1 > data.length - 1
+                  ? data[0]?.img
+                  : data[midPhoto + 1]?.img
+              }
+              alt={
+                midPhoto + 1 > data.length - 1
+                  ? data[0]?.imgAlt
+                  : data[midPhoto + 1]?.imgAlt
+              }
+            />
           </div>
         </div>
         <div></div>
       </div>
       <div className="flex justify-between items-end w-full md:w-1/2 mx-auto">
-        <button className={clsx(buttonStyle, "rounded-tl-sm rounded-br-sm ")}>
+        <button
+          onClick={() =>
+            setMidPhoto((prevState) =>
+              prevState === 0 ? data.length - 1 : prevState - 1
+            )
+          }
+          className={clsx(buttonStyle, "rounded-tl-sm rounded-br-sm ")}
+        >
           <FontAwesomeIcon icon="fa-solid fa-arrow-left" />{" "}
         </button>
         <div className="relative w-3/6">
@@ -72,7 +100,14 @@ const ProjectGallery = ({ data }) => {
             className="block absolute bottom-0 w-full h-0.5 bg-gray-300"
           ></span>
         </div>
-        <button className={clsx(buttonStyle, "rounded-tr-sm rounded-bl-sm")}>
+        <button
+          onClick={() =>
+            setMidPhoto((prevState) =>
+              prevState === data.length - 1 ? 0 : prevState + 1
+            )
+          }
+          className={clsx(buttonStyle, "rounded-tr-sm rounded-bl-sm")}
+        >
           {" "}
           <FontAwesomeIcon icon="fa-solid fa-arrow-right" />{" "}
         </button>

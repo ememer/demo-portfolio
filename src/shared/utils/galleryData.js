@@ -14,4 +14,9 @@ export const galleryProjects = [
     alt: "SkayWallet project",
     img: require("../../images/Assets/design/shots/Shot-3.png").default,
   },
+  {
+    id: 3,
+    alt: "SkayWallet project",
+    img: require("../../images/Assets/design/shots/Test.png").default,
+  },
 ];
