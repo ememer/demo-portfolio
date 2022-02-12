@@ -20,7 +20,8 @@ const notificationBoxClassName =
 const Index = () => {
   const [currentSelectedAkcentIndex, setCurrentSelectedAkcentIndex] =
     useState(null);
-  console.log(galleryProjects);
+  const [isDribbbleInviteVisible, setIsDribbbleInviteVisible] = useState(false);
+
   sal();
   return (
     <div>
@@ -111,14 +112,21 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-3/4 mx-auto">
+            <div className="relative w-full md:w-3/4 mx-auto">
+              {isDribbbleInviteVisible && (
+                <div className="absolute right-1/4 bottom-10 ">test</div>
+              )}
               <h2
                 id="projects"
                 className="w-full py-6 text-4xl font-semibold text-center"
               >
                 Projects
               </h2>
-              <ProjectGallery data={galleryProjects} />
+              <ProjectGallery
+                onClick={setIsDribbbleInviteVisible}
+                data={galleryProjects}
+                isClicked={isDribbbleInviteVisible}
+              />
               <div className="flex flex-col w-full p-4 text-right">
                 Checkout my Dribble site 😏{" "}
                 <a

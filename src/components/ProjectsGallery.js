@@ -10,9 +10,8 @@ library.add(faArrowLeft, faArrowRight);
 
 const buttonStyle = "p-2 px-3 bg-mainDark-100 rounded-md shadow-md";
 
-const ProjectGallery = ({ data }) => {
+const ProjectGallery = ({ data, onClick, isClicked }) => {
   const [lenghtOfPhotoBar, setLenghtOfPhotoBar] = useState();
-
   const [midPhoto, setMidPhoto] = useState(Math.round(data.length / 2) - 1);
 
   // useEffect(() => {
@@ -37,10 +36,11 @@ const ProjectGallery = ({ data }) => {
           data-sal-easing="ease-out-cubic"
           data-sal-delay="200"
           data-sal-duration="1500"
-          className="absolute top-10 -left-2 z-10 w-1/2 p-1 md:p-2 bg-gradient-to-br from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
+          className="flex absolute top-10 -left-2 z-10 items-center w-1/2 h-4/5 p-1 md:p-2 bg-gradient-to-br from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
         >
           <div className="w-full mx-auto rounded-lg">
             <img
+              className="rounded-md"
               src={
                 midPhoto - 1 < 0
                   ? data[data.length - 1]?.img
@@ -55,9 +55,25 @@ const ProjectGallery = ({ data }) => {
           </div>
         </div>
         {/* MID PHOTO*/}
-        <div className="absolute left-1/2 z-20 w-1/2 p-1 md:p-2 bg-gray-200 rounded-lg shadow-lg hover:shadow-xl duration-150 ease-in-out transform hover:scale-110 hover:rotate-1 -translate-x-1/2">
-          <div className="w-full mx-auto rounded-lg">
-            <img src={data[midPhoto].img} alt={data[midPhoto].imgAlt} />
+        <div
+          onClick={() => {
+            if (isClicked) {
+              return;
+            } else {
+              onClick(true);
+              setTimeout(() => {
+                onClick(false);
+              }, 3000);
+            }
+          }}
+          className="flex absolute left-1/2 z-20 items-center w-1/2 h-4/5 p-1 md:p-2 bg-gray-200 rounded-lg shadow-lg hover:shadow-xl duration-150 ease-in-out transform hover:scale-110 hover:rotate-1 -translate-x-1/2"
+        >
+          <div className="mx-auto rounded-lg">
+            <img
+              className="rounded-md"
+              src={data[midPhoto].img}
+              alt={data[midPhoto].imgAlt}
+            />
           </div>
         </div>
         {/* RIGHT PHOTO*/}
@@ -66,10 +82,11 @@ const ProjectGallery = ({ data }) => {
           data-sal-easing="ease-out-cubic"
           data-sal-delay="600"
           data-sal-duration="1500"
-          className="absolute top-10 -right-2 z-10 w-1/2 p-1 md:p-2 bg-gradient-to-bl from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
+          className="flex absolute top-10 -right-2 z-10 items-center w-1/2 h-4/5 p-1 md:p-2 bg-gradient-to-bl from-mainDark-300 to-mainDark-200 rounded-lg shadow-lg"
         >
           <div className="w-full mx-auto rounded-lg">
             <img
+              className="rounded-md"
               src={
                 midPhoto + 1 > data.length - 1
                   ? data[0]?.img
