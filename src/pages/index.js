@@ -70,7 +70,7 @@ const Index = () => {
                 data-sal="flip-up"
                 data-sal-duration="1000"
                 data-sal-easing="ease-in-out-quad"
-                className="inline-block w-full px-2 my-5 text-3xl lg:text-4xl text-center"
+                className="inline-block w-full px-2 my-5 text-3xl lg:text-4xl"
               >
                 Additionally I like motion design too
                 <span className="inline-block w-full text-sm font-light text-blue-300 animate-pulse">
