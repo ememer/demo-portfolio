@@ -115,10 +115,14 @@ const Index = () => {
             </div>
             <div className="relative w-full md:w-3/4 mx-auto">
               {isDribbbleInviteVisible && (
-                <FontAwesomeIcon
-                  className="absolute right-1/2 lg:right-1/4 bottom-5 animate-ping"
-                  icon={faArrowRight}
-                />
+                <div className="flex absolute right-1/2 lg:right-1/4 bottom-4 items-center font-light animate-pulse">
+                  {" "}
+                  You are invited!
+                  <FontAwesomeIcon
+                    className="ml-5 animate-ping"
+                    icon={faArrowRight}
+                  />
+                </div>
               )}
               <h2
                 id="projects"

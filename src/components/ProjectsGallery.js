@@ -5,53 +5,55 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
-import { width } from "tailwindcss/defaultTheme";
 
 library.add(faArrowLeft, faArrowRight);
 
 const buttonStyle = "p-2 px-3 bg-mainDark-100 rounded-md shadow-md";
 
 const ProjectGallery = ({ data, onClick, isClicked }) => {
-  const [barWidthFromWindow, setBarWidthFromWindow] = useState(null);
+  const [
+    barWidthDivatedByCurrentElementWidt,
+    setBarWidthDivatedByCurrentElementWidt,
+  ] = useState(null);
+  const [currentBarStyle, setCurrentBarStyle] = useState(null);
   const [midPhoto, setMidPhoto] = useState(Math.round(data?.length / 2) - 1);
 
   useEffect(() => {
     let barWidth = document.querySelector("#image-bar")?.clientWidth;
     let barWidthByGalleryElement = barWidth / data.length;
-    if (barWidthFromWindow === null) {
-      setBarWidthFromWindow({
+    setBarWidthDivatedByCurrentElementWidt(barWidthByGalleryElement);
+    if (currentBarStyle === null) {
+      setCurrentBarStyle({
         width: barWidthByGalleryElement,
         left: 0,
       });
     }
   }, []);
-  // console.log(
-  //   "RENDER",
-  //   midPhoto,
-  //   typeof barWidthFromWindow?.width,
-  //   barWidthFromWindow?.width,
-  //   typeof barWidthFromWindow?.left,
-  //   barWidthFromWindow?.left
-  // );
+
   function nextItem() {
     setMidPhoto((prevState) =>
       prevState === data.length - 1 ? 0 : prevState + 1
     );
-    setBarWidthFromWindow({
-      ...barWidthFromWindow,
-      left: barWidthFromWindow.width * midPhoto,
+    setCurrentBarStyle({
+      ...currentBarStyle,
+      left: currentBarStyle.width * midPhoto,
     });
   }
+
   function prevItem() {
     setMidPhoto((prevState) =>
       prevState === 0 ? data.length - 1 : prevState - 1
     );
-    setBarWidthFromWindow({
-      ...barWidthFromWindow,
-      left: barWidthFromWindow.width - barWidthFromWindow.width,
+    setCurrentBarStyle((prevState) => {
+      return {
+        ...currentBarStyle,
+        left:
+          midPhoto === 1
+            ? currentBarStyle.width * (data.length - 1)
+            : prevState.left - barWidthDivatedByCurrentElementWidt,
+      };
     });
   }
-  console.log(midPhoto);
 
   return (
     <div>
@@ -95,7 +97,7 @@ const ProjectGallery = ({ data, onClick, isClicked }) => {
               onClick(true);
               setTimeout(() => {
                 onClick(false);
-              }, 3500);
+              }, 5500);
             }
           }}
           className="flex absolute left-1/2 z-20 items-center w-1/2 h-3/4 md:h-3/5 lg:h-4/5 p-1 md:p-2 rounded-lg shadow-lg hover:shadow-xl duration-150 ease-in-out transform hover:scale-110 hover:rotate-1 -translate-x-1/2"
@@ -143,7 +145,7 @@ const ProjectGallery = ({ data, onClick, isClicked }) => {
         </button>
         <div className="relative w-3/6">
           <span
-            style={barWidthFromWindow}
+            style={currentBarStyle}
             className="block absolute bottom-1 h-1.5 bg-gray-300 rounded-sm duration-200 ease-in-out transform translate-y-1/2"
           ></span>
           <span
