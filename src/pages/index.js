@@ -7,10 +7,10 @@ import clsx from "clsx";
 import sal from "sal.js";
 
 import AkcentBox from "../components/AkcentBox";
+import DesignSkillBox from "../components/DesignSkillBox";
 import InterestingFacts from "../components/InterestingFacts";
 import Layout from "../components/Layout";
 import ProjectGallery from "../components/ProjectsGallery";
-import SkillBox from "../components/SkillBox";
 import { designList } from "../shared/utils/design";
 import { galleryProjects } from "../shared/utils/galleryData";
 import { interestingFacts } from "../shared/utils/interestingFacts";
@@ -88,7 +88,7 @@ const Index = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 py-10">
                 <div className="grid order-2 grid-cols-1 md:grid-cols-2 gap-2 w-full">
                   {designList.map((design) => (
-                    <SkillBox
+                    <DesignSkillBox
                       key={design.design}
                       image={design.icon}
                       title={design.design}
