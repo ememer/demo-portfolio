@@ -7,6 +7,7 @@ import clsx from "clsx";
 import sal from "sal.js";
 
 import AkcentBox from "../components/AkcentBox";
+import Content from "../components/Content";
 import DesignSkillBox from "../components/DesignSkillBox";
 import InterestingFacts from "../components/InterestingFacts";
 import Layout from "../components/Layout";
@@ -83,7 +84,7 @@ const Index = () => {
                 id="design"
                 className="py-6 my-5 text-5xl font-bold text-center"
               >
-                Design
+                DESIGN
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 py-10">
                 <div className="grid order-2 grid-cols-1 md:grid-cols-2 gap-2 w-full">
@@ -97,20 +98,20 @@ const Index = () => {
                     />
                   ))}
                 </div>
-                <div className="flex order-1 justify-around items-center">
-                  <p className="w-full lg:w-2/3 p-4 text-lg font-light ">
-                    <span className="inline-block w-full p-2 text-xl font-bold text-left">
-                      Started with MS Paint
-                    </span>
-                    Couple years ago like a kid i was started creating things in
-                    MS Paint and some guy said "Hey this is PhotoShop try it!".
-                    Then i jon to world of design
-                    <span className="font-semibold">
-                      {" "}
-                      and now working with...
-                    </span>
-                  </p>
-                </div>
+                <Content
+                  titleClassName="text-left"
+                  conteinerCalssName="flex order-1 justify-around items-center"
+                  title="Started with MS Paint"
+                >
+                  {" "}
+                  Couple years ago like a kid i was started creating things in
+                  MS Paint and some guy said "Hey this is PhotoShop try it!".
+                  Then i jon to world of design
+                  <span className="font-semibold">
+                    {" "}
+                    and now working with...
+                  </span>
+                </Content>
               </div>
             </div>
             <div className="relative w-full md:w-3/4 mx-auto">
@@ -125,10 +126,10 @@ const Index = () => {
                 </div>
               )}
               <h2
-                id="projects"
+                id="design-projects"
                 className="w-full py-6 text-4xl font-semibold text-center"
               >
-                Projects
+                PROJECTS
               </h2>
               <ProjectGallery
                 onClick={setIsDribbbleInviteVisible}
@@ -146,6 +147,54 @@ const Index = () => {
                   <FontAwesomeIcon className="mr-2" icon={faDribbble} />
                   Dribble.com
                 </a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2
+              id="developing"
+              className="py-6 my-5 text-5xl font-bold text-center"
+            >
+              DEVELOPING
+            </h2>
+            <div className="grid grid-cols-2 gap-2">
+              <div>
+                <Content
+                  titleClassName="text-left"
+                  title="Wages, I require? 🤨"
+                  conteinerCalssName="flex justify-around items-center"
+                >
+                  I decided to start learning programming, not only for
+                  financial reasons ...
+                  <span className="block w-full font-semibold">
+                    Some time ago I realized that the current work does't give
+                    me satisfaction, and the level of advancement over time has
+                    stopped, instead of increasing.
+                  </span>
+                </Content>
+                <Content
+                  titleClassName="text-left"
+                  title="Long way, silent mentors 😶"
+                  conteinerCalssName="flex justify-around items-center"
+                >
+                  I started my adventure with Front-End with a course at
+                  <span className="font-semibold"> Coderslab.</span> in
+                  twenty-twenty.
+                  <span className="block w-full my-10">
+                    Days passed, motivation waned and knowledge wasted. If,
+                    while reading this, you think that he is another fool who
+                    spent the money because the paper will make him a programmer
+                    - you are wrong. The course was supposed to shorten learning
+                    and understanding the basics - it fulfilled its purpose.
+                  </span>
+                  <span className="my-20 font-bold">
+                    At this point, I would like to thank all those who helped me
+                    with my studies.
+                  </span>
+                  <span className="block w-full text-2xl font-bold">
+                    Thanks a lot!✌
+                  </span>
+                </Content>
               </div>
             </div>
           </section>
