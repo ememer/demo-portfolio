@@ -169,4 +169,6 @@ export default ProjectGallery;
 
 ProjectGallery.propTypes = {
   data: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired,
+  isClicked: PropTypes.bool.isRequired,
 };
