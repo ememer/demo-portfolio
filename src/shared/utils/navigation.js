@@ -5,7 +5,7 @@ const navigationLinks = [
     icon: "fa-solid fa-marker",
     projects: {
       link: "PROJECTS",
-      url: "projects",
+      url: "design-projects",
       icon: "fa-solid fa-bullseye",
     },
   },
