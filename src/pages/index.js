@@ -159,7 +159,7 @@ const Index = () => {
             >
               DEVELOPING
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
               <div
                 data-sal="fade"
                 data-sal-easing="ease-out-cubic"
