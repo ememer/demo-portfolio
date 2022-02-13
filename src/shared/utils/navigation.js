@@ -5,18 +5,18 @@ const navigationLinks = [
     icon: "fa-solid fa-marker",
     projects: {
       link: "PROJECTS",
-      url: "projects",
+      url: "design-projects",
       icon: "fa-solid fa-bullseye",
     },
   },
 
   {
     link: "DEVELOPING",
-    url: "/",
+    url: "developing",
     icon: "fa-solid fa-file-code",
     projects: {
       link: "PROJECTS",
-      url: "/",
+      url: "developing-projects",
       icon: "fa-solid fa-bullseye",
     },
   },
