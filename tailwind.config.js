@@ -217,6 +217,18 @@ module.exports = {
           800: "#0A0A19",
           900: "#090916",
         },
+        photoShopBG: {
+          DEFAULT: "#0cafe0",
+        },
+        illustratorBG: {
+          DEFAULT: "#b65e19",
+        },
+        xdBG: {
+          DEFAULT: "#da2286",
+        },
+        paintBG: {
+          DEFAULT: "#086972",
+        },
       },
     },
   },

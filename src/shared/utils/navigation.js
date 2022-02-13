@@ -1,11 +1,11 @@
 const navigationLinks = [
   {
     link: "DESIGN",
-    url: "/",
+    url: "design",
     icon: "fa-solid fa-marker",
     projects: {
       link: "PROJECTS",
-      url: "/",
+      url: "projects",
       icon: "fa-solid fa-bullseye",
     },
   },
