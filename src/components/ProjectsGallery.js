@@ -5,21 +5,53 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
+import { width } from "tailwindcss/defaultTheme";
 
 library.add(faArrowLeft, faArrowRight);
 
 const buttonStyle = "p-2 px-3 bg-mainDark-100 rounded-md shadow-md";
 
 const ProjectGallery = ({ data, onClick, isClicked }) => {
-  const [lenghtOfPhotoBar, setLenghtOfPhotoBar] = useState();
-  const [midPhoto, setMidPhoto] = useState(Math.round(data.length / 2) - 1);
+  const [barWidthFromWindow, setBarWidthFromWindow] = useState(null);
+  const [midPhoto, setMidPhoto] = useState(Math.round(data?.length / 2) - 1);
 
-  // useEffect(() => {
-  //   let imageBarLenght = document.querySelector("#image-bar").clientWidth;
-  //   const progressBarWidth = imageBarLenght / data.length;
-  //   setLenghtOfPhotoBar(progressBarWidth);
-  //   console.log("lenght", document.querySelector("#image-bar").clientWidth);
-  // }, [lenghtOfPhotoBar]);
+  useEffect(() => {
+    let barWidth = document.querySelector("#image-bar")?.clientWidth;
+    let barWidthByGalleryElement = barWidth / data.length;
+    if (barWidthFromWindow === null) {
+      setBarWidthFromWindow({
+        width: barWidthByGalleryElement,
+        left: 0,
+      });
+    }
+  }, []);
+  // console.log(
+  //   "RENDER",
+  //   midPhoto,
+  //   typeof barWidthFromWindow?.width,
+  //   barWidthFromWindow?.width,
+  //   typeof barWidthFromWindow?.left,
+  //   barWidthFromWindow?.left
+  // );
+  function nextItem() {
+    setMidPhoto((prevState) =>
+      prevState === data.length - 1 ? 0 : prevState + 1
+    );
+    setBarWidthFromWindow({
+      ...barWidthFromWindow,
+      left: barWidthFromWindow.width * midPhoto,
+    });
+  }
+  function prevItem() {
+    setMidPhoto((prevState) =>
+      prevState === 0 ? data.length - 1 : prevState - 1
+    );
+    setBarWidthFromWindow({
+      ...barWidthFromWindow,
+      left: barWidthFromWindow.width - barWidthFromWindow.width,
+    });
+  }
+  console.log(midPhoto);
 
   return (
     <div>
@@ -104,28 +136,23 @@ const ProjectGallery = ({ data, onClick, isClicked }) => {
       </div>
       <div className="flex justify-between items-end w-full md:w-1/2 mx-auto">
         <button
-          onClick={() =>
-            setMidPhoto((prevState) =>
-              prevState === 0 ? data.length - 1 : prevState - 1
-            )
-          }
+          onClick={() => prevItem()}
           className={clsx(buttonStyle, "rounded-tl-sm rounded-br-sm ")}
         >
           <FontAwesomeIcon icon="fa-solid fa-arrow-left" />{" "}
         </button>
         <div className="relative w-3/6">
-          <span className="block absolute bottom-1 w-24 h-1.5 bg-gray-300 rounded-sm translate-y-1/2"></span>
+          <span
+            style={barWidthFromWindow}
+            className="block absolute bottom-1 h-1.5 bg-gray-300 rounded-sm duration-200 ease-in-out transform translate-y-1/2"
+          ></span>
           <span
             id={"image-bar"}
             className="block absolute bottom-0 w-full h-0.5 bg-gray-300"
           ></span>
         </div>
         <button
-          onClick={() =>
-            setMidPhoto((prevState) =>
-              prevState === data.length - 1 ? 0 : prevState + 1
-            )
-          }
+          onClick={() => nextItem()}
           className={clsx(buttonStyle, "rounded-tr-sm rounded-bl-sm")}
         >
           {" "}
