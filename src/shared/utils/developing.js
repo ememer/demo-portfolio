@@ -11,7 +11,7 @@ const developingList = [
         tech: "Gatsby",
       },
       {
-        tech: "Google 😁",
+        tech: "Google 🧐",
       },
     ],
     planed: [

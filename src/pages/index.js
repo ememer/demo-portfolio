@@ -159,15 +159,16 @@ const Index = () => {
             >
               DEVELOPING
             </h2>
-            <div className="grid grid-cols-2 gap-2">
-              <dvi
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+              <div
                 data-sal="flip-down"
                 data-sal-easing="ease-out-cubic"
-                data-sal-delay="400"
-                data-sal-duration="1500"
+                data-sal-delay="600"
+                data-sal-duration="1300"
               >
                 {developingList.map((devItem) => (
                   <DevelopingSkillBox
+                    key={devItem.envy}
                     title={devItem.envy}
                     image={devItem.img}
                     tech={devItem.technology}
@@ -178,6 +179,7 @@ const Index = () => {
                 ))}
                 {stylingList.map((stylingItem) => (
                   <DevelopingSkillBox
+                    key={stylingItem.envy}
                     title={stylingItem.envy}
                     image={stylingItem.img}
                     tech={stylingItem.technology}
@@ -185,7 +187,7 @@ const Index = () => {
                     imgClassName={"bg-blue-500"}
                   />
                 ))}
-              </dvi>
+              </div>
               <div
                 data-sal="zoom-in"
                 data-sal-easing="ease-out-cubic"

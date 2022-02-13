@@ -11,7 +11,6 @@ const DesignSkillBox = ({
   imgAlt,
   imgClassName,
 }) => {
-  console.log(feauture);
   return (
     <div className="grid grid-cols-2 gap-5 items-center w-full py-16 px-6 my-10 bg-mainDark-300 rounded-md shadow-lg">
       <div
@@ -34,7 +33,7 @@ const DesignSkillBox = ({
         </ul>
         {feauture && (
           <div className="ml-5">
-            <h2 className="my-2 text-xl font-semibold">Planed</h2>
+            <h2 className="my-2 text-xl font-semibold">Planned</h2>
             <ul>
               {feauture.map((feautureItem, index) => (
                 <li className="my-3 ml-2" key={index}>
