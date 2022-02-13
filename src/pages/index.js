@@ -159,9 +159,9 @@ const Index = () => {
             >
               DEVELOPING
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items">
               <div
-                data-sal="flip-down"
+                data-sal="fade"
                 data-sal-easing="ease-out-cubic"
                 data-sal-delay="600"
                 data-sal-duration="1300"
