@@ -17,6 +17,6 @@ export const galleryProjects = [
   {
     id: 4,
     alt: "Test project",
-    img: require("../../images/Assets/design/shots/Test.png").default,
+    img: require("../../images/Assets/design/shots/test.png").default,
   },
 ];
