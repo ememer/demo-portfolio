@@ -9,10 +9,12 @@ import sal from "sal.js";
 import AkcentBox from "../components/AkcentBox";
 import Content from "../components/Content";
 import DesignSkillBox from "../components/DesignSkillBox";
+import DevelopingSkillBox from "../components/DevelopingSkillBox";
 import InterestingFacts from "../components/InterestingFacts";
 import Layout from "../components/Layout";
 import ProjectGallery from "../components/ProjectsGallery";
 import { designList } from "../shared/utils/design";
+import { developingList, stylingList } from "../shared/utils/developing";
 import { galleryProjects } from "../shared/utils/galleryData";
 import { interestingFacts } from "../shared/utils/interestingFacts";
 
@@ -158,7 +160,39 @@ const Index = () => {
               DEVELOPING
             </h2>
             <div className="grid grid-cols-2 gap-2">
-              <div>
+              <dvi
+                data-sal="flip-down"
+                data-sal-easing="ease-out-cubic"
+                data-sal-delay="400"
+                data-sal-duration="1500"
+              >
+                {developingList.map((devItem) => (
+                  <DevelopingSkillBox
+                    title={devItem.envy}
+                    image={devItem.img}
+                    tech={devItem.technology}
+                    feauture={devItem.planed}
+                    imgAlt={devItem.imgAlt}
+                    imgClassName={"bg-yellow-200"}
+                  />
+                ))}
+                {stylingList.map((stylingItem) => (
+                  <DevelopingSkillBox
+                    title={stylingItem.envy}
+                    image={stylingItem.img}
+                    tech={stylingItem.technology}
+                    imgAlt={stylingItem.imgAlt}
+                    imgClassName={"bg-blue-500"}
+                  />
+                ))}
+              </dvi>
+              <div
+                data-sal="zoom-in"
+                data-sal-easing="ease-out-cubic"
+                data-sal-delay="400"
+                data-sal-duration="1500"
+                className="py-4"
+              >
                 <Content
                   titleClassName="text-left"
                   title="Wages, I require? 🤨"

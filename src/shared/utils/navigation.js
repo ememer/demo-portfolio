@@ -12,11 +12,11 @@ const navigationLinks = [
 
   {
     link: "DEVELOPING",
-    url: "/",
+    url: "developing",
     icon: "fa-solid fa-file-code",
     projects: {
       link: "PROJECTS",
-      url: "/",
+      url: "developing-projects",
       icon: "fa-solid fa-bullseye",
     },
   },
