@@ -12,9 +12,11 @@ import DesignSkillBox from "../components/DesignSkillBox";
 import DevelopingSkillBox from "../components/DevelopingSkillBox";
 import InterestingFacts from "../components/InterestingFacts";
 import Layout from "../components/Layout";
+import ProjectCard from "../components/ProjectCard";
 import ProjectGallery from "../components/ProjectsGallery";
 import { designList } from "../shared/utils/design";
 import { developingList, stylingList } from "../shared/utils/developing";
+import { developingProjects } from "../shared/utils/developingProjects";
 import { galleryProjects } from "../shared/utils/galleryData";
 import { interestingFacts } from "../shared/utils/interestingFacts";
 
@@ -46,40 +48,7 @@ const Index = () => {
               </p>
             </div>
           </section>
-          <section className="py-20">
-            <div className="flex flex-col lg:flex-row justify-between items-center">
-              <AkcentBox className="relative w-full min-h-50-screen">
-                {interestingFacts.map((box, index) => (
-                  <InterestingFacts
-                    onSelect={setCurrentSelectedAkcentIndex}
-                    image={box.imageSrc}
-                    boxId={index}
-                    key={box.id}
-                    paragraph={box.paragraph}
-                    title={box.title}
-                    className={clsx(
-                      interestingFactsClassName,
-                      currentSelectedAkcentIndex === index
-                        ? box.shuffle
-                        : box.className
-                    )}
-                  />
-                ))}
-              </AkcentBox>
-              <h2
-                data-sal="flip-up"
-                data-sal-duration="1000"
-                data-sal-easing="ease-in-out-quad"
-                className="inline-block w-full px-2 my-5 text-3xl lg:text-4xl"
-              >
-                Additionally I like motion design too
-                <span className="inline-block w-full text-sm font-light text-blue-300 animate-pulse">
-                  {" "}
-                  Click on each boxes 🤤
-                </span>
-              </h2>
-            </div>
-          </section>
+
           <section className="py-20">
             <div className="w-full">
               <h2
@@ -213,7 +182,7 @@ const Index = () => {
                   title="Long way, silent mentors 😶"
                   conteinerCalssName="flex justify-around items-center"
                 >
-                  I started my adventure with Front-End with a course at
+                  I started my Front-End adventure with a course at
                   <span className="font-semibold"> Coderslab.</span> in
                   twenty-twenty.
                   <span className="block w-full my-10">
@@ -235,10 +204,58 @@ const Index = () => {
             </div>
             <h2
               id="developing-projects"
-              className="w-full py-6 text-4xl font-semibold text-center"
+              className="w-full py-6 my-10 text-4xl font-semibold text-center"
             >
               PROJECTS
             </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {developingProjects.map((project) => (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  mobileSupport={project.mobileSupport}
+                  imgUrl={project.image}
+                  gitUrl={project.gitUrl}
+                  gitAlt={project.gitAlt}
+                  demoUrl={project.demo}
+                  demoAlt={project.demoAlt}
+                />
+              ))}
+            </div>
+          </section>
+          <section className="py-20">
+            <div className="flex flex-col lg:flex-row justify-between items-center">
+              <AkcentBox className="relative w-full min-h-50-screen">
+                {interestingFacts.map((box, index) => (
+                  <InterestingFacts
+                    onSelect={setCurrentSelectedAkcentIndex}
+                    image={box.imageSrc}
+                    boxId={index}
+                    key={box.id}
+                    paragraph={box.paragraph}
+                    title={box.title}
+                    className={clsx(
+                      interestingFactsClassName,
+                      currentSelectedAkcentIndex === index
+                        ? box.shuffle
+                        : box.className
+                    )}
+                  />
+                ))}
+              </AkcentBox>
+              <h2
+                data-sal="flip-up"
+                data-sal-duration="1000"
+                data-sal-easing="ease-in-out-quad"
+                className="inline-block w-full px-2 my-5 text-3xl lg:text-4xl"
+              >
+                Additionally I like motion design too
+                <span className="inline-block w-full text-sm font-light text-blue-300 animate-pulse">
+                  {" "}
+                  Click on each boxes 🤤
+                </span>
+              </h2>
+            </div>
           </section>
         </div>
       </Layout>
