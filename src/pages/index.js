@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
 import { faDribbble } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import sal from "sal.js";
 
 import AkcentBox from "../components/AkcentBox";
+import ContactForm from "../components/ContactForm";
 import Content from "../components/Content";
 import DesignSkillBox from "../components/DesignSkillBox";
 import DevelopingSkillBox from "../components/DevelopingSkillBox";
@@ -255,6 +256,24 @@ const Index = () => {
                   Click on each boxes 🤤
                 </span>
               </h2>
+            </div>
+          </section>
+          <section>
+            <h2
+              id="contact"
+              className="py-6 my-5 text-5xl font-bold text-center"
+            >
+              CONTACT
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center w-full p-6 my-10 mx-auto shadow-2xl">
+              <div className="text-3xl lg:text-5xl font-bold text-center">
+                Let's collaborate
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="hidden lg:block w-2/4 h-1/4 p-20 my-6 mx-auto rounded-md shadow-lg opacity-90"
+                />
+              </div>
+              <ContactForm />
             </div>
           </section>
         </div>

@@ -22,7 +22,7 @@ const navigationLinks = [
   },
   {
     link: "CONTACT",
-    url: "/",
+    url: "contact",
     icon: "fa-solid fa-address-card",
   },
   {
