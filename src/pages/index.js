@@ -75,7 +75,6 @@ const Index = () => {
                   conteinerCalssName="flex order-1 justify-around items-center"
                   title="Started with MS Paint"
                 >
-                  {" "}
                   Couple years ago like a kid i was started creating things in
                   MS Paint and some guy said "Hey this is PhotoShop try it!".
                   Then i jon to world of design
@@ -252,7 +251,6 @@ const Index = () => {
               >
                 Additionally I like motion design too
                 <span className="inline-block w-full text-sm font-light text-blue-300 animate-pulse">
-                  {" "}
                   Click on each boxes 🤤
                 </span>
               </h2>
