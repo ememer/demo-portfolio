@@ -27,7 +27,7 @@ const navigationLinks = [
   },
   {
     link: "RESUME",
-    url: "/",
+    url: "resume",
     icon: "fa-solid fa-file",
   },
 ];

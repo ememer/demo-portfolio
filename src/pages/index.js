@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
 import { faDribbble } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faEnvelope,
+  faFile,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import sal from "sal.js";
@@ -272,6 +276,28 @@ const Index = () => {
                 />
               </div>
               <ContactForm />
+            </div>
+          </section>
+          <section className="mt-10 mb-20">
+            <h2
+              id="resume"
+              className="w-full py-6 my-10 text-4xl font-semibold text-center"
+            >
+              RESUME
+            </h2>
+            <div className="flex justify-center items-center w-full p-4 mx-auto text-center">
+              <FontAwesomeIcon
+                className="mx-auto text-3xl md:text-9xl"
+                icon={faFile}
+              />
+              <a
+                href="/file/Michal_Sopel_CV.pdf"
+                download
+                alt="resume download"
+                className="p-6 mx-auto md:text-6xl text-mainDark-200 bg-gray-100 rounded-md"
+              >
+                Get Resume!
+              </a>
             </div>
           </section>
         </div>
